@@ -5,6 +5,7 @@ import {
   faPlus,
   faTrash,
 } from "@fortawesome/free-solid-svg-icons";
+import { Category } from "../../models/category-model";
 
 @Component({
   selector: "app-category-box",
@@ -16,7 +17,7 @@ export class CategoryBoxComponent implements OnInit {
   faGear = faGear;
   faPlay = faPlay;
 
-  @Input() categoryName = "";
+  @Input() category: Category = { name: "", id: 0 };
   @Output() removeEvent: EventEmitter<void> = new EventEmitter<void>();
 
   constructor() {}
