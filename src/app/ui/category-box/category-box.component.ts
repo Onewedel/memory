@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
 import {
   faGear,
   faPlay,
@@ -17,8 +17,13 @@ export class CategoryBoxComponent implements OnInit {
   faPlay = faPlay;
 
   @Input() categoryName = "";
+  @Output() removeEvent: EventEmitter<void> = new EventEmitter<void>();
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  emitRemove() {
+    this.removeEvent.emit();
+  }
 }
