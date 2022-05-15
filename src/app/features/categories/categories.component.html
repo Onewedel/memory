@@ -5,8 +5,8 @@
                      (removeEvent)="removeCategory(category)"
    ></app-category-box>
     <input [(ngModel)]="newCategoryName" type="text" class="uk-input"
-           placeholder="Nazwa Kategorii">
-    <button class="uk-button uk-border-pill uk-margin" (click)="addCategory()">
+           placeholder="Nazwa Kategorii" (keyup.enter)="addCategory()">
+    <button class="uk-button uk-border-pill uk-margin"  (click)="addCategory()">
       <fa-icon [icon]="faPlus"></fa-icon>
     </button>
   </div>
