@@ -17,6 +17,8 @@ export class CategoriesComponent implements OnInit {
   faPlay = faPlay;
   faPlus = faPlus;
 
+  catName = "Jakaś kategoria";
+
   constructor() {}
 
   ngOnInit(): void {}
